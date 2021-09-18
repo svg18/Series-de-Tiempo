@@ -2,6 +2,7 @@
 title: "Análisis de Series de Tiempo"
 author:
   - "Sofía Villers Gómez"
+  - "David Alberto Mateos Montes de Oca"
   - "Carlos Fernando Vásquez Guerra"
   - "Luis Angel Ramirez Teodoro"
 site: bookdown::bookdown_site

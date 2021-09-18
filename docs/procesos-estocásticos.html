@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 1 Procesos estocásticos | Análisis de Series de Tiempo</title>
   <meta name="description" content="Segundo material para el curso Análisis de Supervivencia y Series de Tiempo 2021-1 en la Facultado de Ciencias, Universidad Nacional Autónoma de México" />
-  <meta name="generator" content="bookdown 0.21.6 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 1 Procesos estocásticos | Análisis de Series de Tiempo" />
   <meta property="og:type" content="book" />
@@ -34,8 +34,9 @@
   
 <link rel="prev" href="series-de-tiempo.html"/>
 <link rel="next" href="funciones-de-autocovarianza-y-autocorrelación.html"/>
-<script src="libs/header-attrs-2.6.4/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.9/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -51,7 +52,6 @@
 
 
 
-
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 <link href="libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -59,6 +59,28 @@
 
 
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 </head>
@@ -212,10 +234,16 @@ Cov(\epsilon_{t_i},\epsilon_{t_j})=0 \space \forall t_i \neq t_j
 </div>
 </div>
 </div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-cryer2008time" class="csl-entry">
+Cryer, Jonathan D, and Kung-Sik Chan. 2008. <em>Time Series Analysis: With Applications in r</em>. Springer Science &amp; Business Media.
+</div>
+</div>
 <div class="footnotes">
 <hr />
 <ol start="1">
-<li id="fn1"><p>El nombre de ruido blanco puede explicarse fácilmente en el análisis espectral en series de tiempo, el cual hace un estudio sobre la frecuencia y no tanto sobre el tiempo. Este no se verá en este material pero se puede estudiar a detalle esto en el libro <span class="citation">Cryer and Chan (<a href="#ref-cryer2008time" role="doc-biblioref">2008</a>)</span>. Bajo un análisis espectral, en un proceso de ruido, su función de densidad espectral (se puede pensar la densidad espectral como la cantidad de varianza en un intervalo <span class="math inline">\((\omega, \omega+d\omega)\)</span> que aporta un modelo basado en una serie de Fourier) es constante, es decir que esto sucede para todas las frecuencias. Esto es análogo al espectro de luz blanca en el ámbito físico; ya que todos los colores se distribuyen uniformemente para formar la luz blanca.<a href="procesos-estocásticos.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn1"><p>El nombre de ruido blanco puede explicarse fácilmente en el análisis espectral en series de tiempo, el cual hace un estudio sobre la frecuencia y no tanto sobre el tiempo. Este no se verá en este material pero se puede estudiar a detalle esto en el libro <span class="citation"><a href="#ref-cryer2008time" role="doc-biblioref">Cryer and Chan</a> (<a href="#ref-cryer2008time" role="doc-biblioref">2008</a>)</span>. Bajo un análisis espectral, en un proceso de ruido, su función de densidad espectral (se puede pensar la densidad espectral como la cantidad de varianza en un intervalo <span class="math inline">\((\omega, \omega+d\omega)\)</span> que aporta un modelo basado en una serie de Fourier) es constante, es decir que esto sucede para todas las frecuencias. Esto es análogo al espectro de luz blanca en el ámbito físico; ya que todos los colores se distribuyen uniformemente para formar la luz blanca.<a href="procesos-estocásticos.html#fnref1" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -228,7 +256,6 @@ Cov(\epsilon_{t_i},\epsilon_{t_j})=0 \space \forall t_i \neq t_j
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -247,6 +274,7 @@ gitbook.start({
 "weibo": false,
 "instapaper": false,
 "vk": false,
+"whatsapp": false,
 "all": ["facebook", "twitter", "github", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
@@ -267,6 +295,10 @@ gitbook.start({
 "text": null
 },
 "download": ["_main.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "section"
 }

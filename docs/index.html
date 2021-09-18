@@ -5,23 +5,24 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Análisis de Series de Tiempo</title>
-  <meta name="description" content="Segundo material para el curso Análisis de Supervivencia y Series de Tiempo 2021-1 en la Facultado de Ciencias, Universidad Nacional Autónoma de México" />
+  <meta name="description" content="Material para el curso Análisis de Supervivencia y Series de Tiempo en la Facultad de Ciencias, Universidad Nacional Autónoma de México" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Análisis de Series de Tiempo" />
   <meta property="og:type" content="book" />
-  <meta property="og:url" content="https://github.com/CarlosFernandoVG/SeriesBookdown_FC2021-1" />
+  <meta property="og:url" content="https://github.com/svg18/Series-de-Tiempo" />
   
-  <meta property="og:description" content="Segundo material para el curso Análisis de Supervivencia y Series de Tiempo 2021-1 en la Facultado de Ciencias, Universidad Nacional Autónoma de México" />
-  <meta name="github-repo" content="CarlosFernandoVG/SeriesBookdown_FC2021-1" />
+  <meta property="og:description" content="Material para el curso Análisis de Supervivencia y Series de Tiempo en la Facultad de Ciencias, Universidad Nacional Autónoma de México" />
+  <meta name="github-repo" content="svg18/Series-de-Tiempo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Análisis de Series de Tiempo" />
   
-  <meta name="twitter:description" content="Segundo material para el curso Análisis de Supervivencia y Series de Tiempo 2021-1 en la Facultado de Ciencias, Universidad Nacional Autónoma de México" />
+  <meta name="twitter:description" content="Material para el curso Análisis de Supervivencia y Series de Tiempo en la Facultad de Ciencias, Universidad Nacional Autónoma de México" />
   
 
 <meta name="author" content="Sofía Villers Gómez" />
+<meta name="author" content="David Alberto Mateos Montes de Oca" />
 <meta name="author" content="Carlos Fernando Vásquez Guerra" />
 <meta name="author" content="Luis Angel Ramirez Teodoro" />
 
@@ -107,7 +108,6 @@ div.csl-indent {
 </ul></li>
 <li class="part"><span><b>I Un primer vistazo</b></span></li>
 <li class="chapter" data-level="" data-path="motivación.html"><a href="motivación.html"><i class="fa fa-check"></i>Motivación</a></li>
-<li class="chapter" data-level="" data-path="series-de-tiempo.html"><a href="series-de-tiempo.html"><i class="fa fa-check"></i>Series de Tiempo</a></li>
 <li class="chapter" data-level="1" data-path="procesos-estocásticos.html"><a href="procesos-estocásticos.html"><i class="fa fa-check"></i><b>1</b> Procesos estocásticos</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="procesos-estocásticos.html"><a href="procesos-estocásticos.html#proceso-estocástico-estacionario"><i class="fa fa-check"></i><b>1.1</b> Proceso estocástico estacionario</a></li>
@@ -164,8 +164,7 @@ div.csl-indent {
 <li class="chapter" data-level="10" data-path="modelacion-univariada.html"><a href="modelacion-univariada.html"><i class="fa fa-check"></i><b>10</b> Construcción de modelos para series de tiempo univariadas</a></li>
 <li class="part"><span><b>V Procesos no lineales</b></span></li>
 <li class="chapter" data-level="11" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>11</b> Introducción</a></li>
-<li class="chapter" data-level="12" data-path="archq-proceso-autoregresivo-con-heterocedasticidad-condicional.html"><a href="archq-proceso-autoregresivo-con-heterocedasticidad-condicional.html"><i class="fa fa-check"></i><b>12</b> <span class="math inline">\(ARCH(q)\)</span>: Proceso Autoregresivo con Heterocedasticidad Condicional</a></li>
-<li class="chapter" data-level="13" data-path="garchpq-proceso-autoregresivo-generalizado-con-heterocedasticidad-condicional.html"><a href="garchpq-proceso-autoregresivo-generalizado-con-heterocedasticidad-condicional.html"><i class="fa fa-check"></i><b>13</b> <span class="math inline">\(GARCH(p,q)\)</span>: Proceso Autoregresivo Generalizado con Heterocedasticidad Condicional</a></li>
+<li class="chapter" data-level="12" data-path="garchpq-proceso-autoregresivo-generalizado-con-heterocedasticidad-condicional.html"><a href="garchpq-proceso-autoregresivo-generalizado-con-heterocedasticidad-condicional.html"><i class="fa fa-check"></i><b>12</b> <span class="math inline">\(GARCH(p,q)\)</span>: Proceso Autoregresivo Generalizado con Heterocedasticidad Condicional</a></li>
 <li class="divider"></li>
 <li><a href="https://bookdown.org" target="_blank">Hecho con bookdown</a></li>
 
@@ -189,6 +188,7 @@ div.csl-indent {
 <div id="header">
 <h1 class="title">Análisis de Series de Tiempo</h1>
 <p class="author"><em>Sofía Villers Gómez</em></p>
+<p class="author"><em>David Alberto Mateos Montes de Oca</em></p>
 <p class="author"><em>Carlos Fernando Vásquez Guerra</em></p>
 <p class="author"><em>Luis Angel Ramirez Teodoro</em></p>
 </div>
@@ -231,9 +231,10 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
- [1] TSA_1.3          forecast_8.15    kableExtra_1.3.4 knitr_1.33       latex2exp_0.5.0 
- [6] patchwork_1.1.1  forcats_0.5.1    stringr_1.4.0    dplyr_1.0.7      purrr_0.3.4     
-[11] readr_2.0.0      tidyr_1.1.3      tibble_3.1.2     ggplot2_3.3.5    tidyverse_1.3.1 
+ [1] TSA_1.3          forecast_8.15    kableExtra_1.3.4 knitr_1.33      
+ [5] latex2exp_0.5.0  patchwork_1.1.1  forcats_0.5.1    stringr_1.4.0   
+ [9] dplyr_1.0.7      purrr_0.3.4      readr_2.0.0      tidyr_1.1.3     
+[13] tibble_3.1.2     ggplot2_3.3.5    tidyverse_1.3.1 
 
 loaded via a namespace (and not attached):
  [1] nlme_3.1-152      fs_1.5.0          xts_0.12.1        lubridate_1.7.10 
@@ -253,9 +254,9 @@ loaded via a namespace (and not attached):
 [57] parallel_4.1.0    crayon_1.4.1      lattice_0.20-44   splines_4.1.0    
 [61] haven_2.4.1       hms_1.1.0         locfit_1.5-9.4    pillar_1.6.1     
 [65] reprex_2.0.0      urca_1.3-0        glue_1.4.2        evaluate_0.14    
-[69] renv_0.14.0       modelr_0.1.8      vctrs_0.3.8       tzdb_0.1.2       
-[73] cellranger_1.1.0  gtable_0.3.0      assertthat_0.2.1  xfun_0.24        
-[77] broom_0.7.9       viridisLite_0.4.0 timeDate_3043.102 ellipsis_0.3.2   </code></pre>
+[69] modelr_0.1.8      vctrs_0.3.8       tzdb_0.1.2        cellranger_1.1.0 
+[73] gtable_0.3.0      assertthat_0.2.1  xfun_0.24         broom_0.7.9      
+[77] viridisLite_0.4.0 timeDate_3043.102 ellipsis_0.3.2   </code></pre>
 <p>Este libro fue escrito con <a href="http://bookdown.org/">bookdown</a> usando <a href="http://www.rstudio.com/ide/">RStudio</a>.</p>
 <p>Esta versión fue escrita con:</p>
 <pre><code>Finding R package dependencies ... Done!</code></pre>
@@ -263,7 +264,7 @@ loaded via a namespace (and not attached):
  version  R version 4.1.0 (2021-05-18)
  os       Windows 10 x64              
  system   x86_64, mingw32             
- ui       RStudio                     
+ ui       RTerm                       
  language (EN)                        
  collate  Spanish_Mexico.1252         
  ctype    Spanish_Mexico.1252         

@@ -2,7 +2,7 @@
 
 # Motivación {-}
 
-Sólo para recordar lo que se mencionaba en el primer material, nuestro objetivo en esta parte será responder preguntas como: *¿Cuál será el precio de las acciones de Facebook para el último bimestre del 2020?, ¿Cuál será el nivel de partículas contaminantes en la CDMX para noviembre de 2020?, ¿Cuál será la capacidad de un procesador intel para el año 2021?*, puede parecer, en primera instancia, una tarea complicada. Si bien no tenemos una "bola mágica" con la que podamos adivinar el futuro, disponemos de ciertos procesos estocásticos llamados *Series de Tiempo*, cuyo objetivo principal es el *pronóstico*.
+Sólo para recordar lo que se mencionaba en el primer material, nuestro objetivo en esta parte será responder preguntas como: *¿Cuál será el precio de las acciones de Facebook para el último bimestre del 2022?, ¿Cuál será el nivel de partículas contaminantes en la CDMX para septiembre de 2022?, ¿Cuál será la capacidad de un procesador intel para el año 2023?*, puede parecer, en primera instancia, una tarea complicada. Si bien no tenemos una "bola mágica" con la que podamos adivinar el futuro, disponemos de ciertos procesos estocásticos llamados *Series de Tiempo*, cuyo objetivo principal es el *pronóstico*.
 
 # Series de Tiempo {-}
 

@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Procesos estocásticos
 
 La palabra estocástico, que tiene origen Griego, era usada bajo el significado de *perteneciente al azar*. En ese sentido un proceso estocástico se define como un conjunto de variables aleatorias ordenadas según el tiempo (o el espacio que corresponda), el cual puede ser continuo o discreto.
@@ -76,7 +81,8 @@ walkRandom <- tibble(time = 1:100, random = rnorm(100), walk = cumsum(random))
 
 La anterior gráfica esta basada en 100 simulaciones de una normal estándar bajo con una semilla en 123.
 
-### Ejercicio
-Reproducir la caminata aleatoria y ver ¿qué sucede al aumentar el número de simulaciones $(n=1000)$? ¿Por qué sucede este nuevo comportamiento?
+### Ejercicios
+1) Reproducir la caminata aleatoria con semilla (123) mostrada en la gráfica anterior.
+2) Ver ¿qué sucede al aumentar el número de simulaciones $(n=1000)$? ¿Por qué sucede este nuevo comportamiento?
 
 [^1.1]: El nombre de ruido blanco puede explicarse fácilmente en el análisis espectral en series de tiempo, el cual hace un estudio sobre la frecuencia y no tanto sobre el tiempo. Este no se verá en este material pero se puede estudiar a detalle esto en el libro @cryer2008time. Bajo un análisis espectral, en un proceso de ruido, su función de densidad espectral (se puede pensar la densidad espectral como la cantidad de varianza en un intervalo $(\omega, \omega+d\omega)$ que aporta un modelo basado en una serie de Fourier) es constante, es decir que esto sucede para todas las frecuencias. Esto es análogo al espectro de luz blanca en el ámbito físico; ya que todos los colores se distribuyen uniformemente para formar la luz blanca.

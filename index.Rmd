@@ -36,6 +36,7 @@ library(knitr)
 library(kableExtra)
 library(forecast)
 library(TSA)
+library(tibble)
 knitr::opts_chunk$set(
       comment = NA,
       message = FALSE, 
@@ -58,9 +59,7 @@ Primera edición del bookdown  _Análisis de Series de Tiempo_ para su uso en la
 
 ### Estructura {-}
 
-Este libro se compone de 
-
-Se recomienda que la consulta de los capítulos se realice de acuerdo al índice, ya que a medida que se avanza en índice, se asume el conocimiento de los capítulos previos.
+Este libro se compone de 13 capítulos. Se recomienda que la consulta de los capítulos se realice de acuerdo al índice, ya que a medida que se avanza en índice, se asume el conocimiento de los capítulos previos.
 
 ### Detalles técnicos {-}
 

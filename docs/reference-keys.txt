@@ -2,7 +2,7 @@ procesos-estocásticos
 proceso-estocástico-estacionario
 ruido-blanco-white-noise
 caminata-aleatoria
-ejercicio
+ejercicios
 funciones-de-autocovarianza-y-autocorrelación
 función-de-autocorrelación-parcial
 correlograma

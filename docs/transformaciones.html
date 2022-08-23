@@ -202,7 +202,7 @@ div.csl-indent {
 <h2><span class="header-section-number">3.2</span> Suavizamiento por polinomios ajustados</h2>
 <p>En este método de suavizamiento el objetivo es estimar y extraer la <strong>tendencia</strong> (<span class="math inline">\(T_t\)</span>) y la <strong>estacionalidad</strong> (<span class="math inline">\(E_t\)</span>) del modelo. Si <span class="math inline">\(E_t= 0\)</span>, se tiene un caso de no estacionariedad simple, por lo que el proceso tiene un comportamiento estacionario alrededor de la tendencia y para estimar <span class="math inline">\(T_t\)</span> se supone que tiene la siguiente forma:</p>
 <p><span class="math display">\[
-T_t = a_0 + a_1 +... + a_pt^p
+T_t = a_0 + a_1t +... + a_pt^p
 \]</span></p>
 <p>Si se tiene <span class="math inline">\(p = 1\)</span> la tendencia es lineal, si <span class="math inline">\(p = 2\)</span> la tendencia es cuadrática.</p>
 <p>Los parámetros <span class="math inline">\(a_i\)</span> se estiman mediante mínimos cuadrados ordinarios, es decir que minimicen <span class="math inline">\(\sum_{i=1}^n (x_i-T_i)^2\)</span>.</p>
@@ -223,11 +223,11 @@ B^kX_t=X_{t-k}
 <p><span class="math display">\[
 \nabla Z_t=Z_t-Z_{t-1}=Z_t-BZ_t=(1-B)Z_t
 \]</span>
-Teniendo que <span class="math inline">\(\nabla=(1-B)\)</span>
-Si aplicamos el operador diferencia sucesivamente entonces se obtiene:</p>
+Teniendo que <span class="math inline">\(\nabla=(1-B)\)</span></p>
+<p>Si aplicamos el operador diferencia sucesivamente entonces se obtiene:</p>
 <p><span class="math display">\[
 \begin{array}{cc}
-\nabla^k=(1-B)^k; &amp; \nabla^kX_t=\sum_{j=0}^k\frac{k!}{k!(k-1)!}(-1)^kX_{t-k}
+\nabla^k=(1-B)^k; &amp; \nabla^kX_t=\sum_{j=0}^k\frac{k!}{j!(k-j)!}(-1)^jX_{t-j}
 \end{array}
 \]</span></p>
 

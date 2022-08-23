@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Transformaciones
 
 La mayoría de las series de tiempo no son débilmente estacionarias, es decir que no muestran una media ni una varianza constantes a lo largo del tiempo y pueden mostrar tendencias crecientes o bien, decrecientes. Para poder trabajar con este tipo de series de una forma más sencilla y manejable, existen métodos para transformarlas y verlas como realizaciones de una serie de tiempo débilmente estacionaria. Las transformaciones más comunes son el suavizamiento a través de medias móviles o ajustando polinomios a la serie en cuestión, la diferenciación.
@@ -17,7 +22,7 @@ Este es uno de mucho filtros lineales que podrían aplicarse ($\hat T_t=\sum_{j=
 En este método de suavizamiento el objetivo es estimar y extraer la **tendencia** ($T_t$) y la **estacionalidad** ($E_t$) del modelo. Si $E_t= 0$, se tiene un caso de no estacionariedad simple, por lo que el proceso tiene un comportamiento estacionario alrededor de la tendencia y para estimar $T_t$ se supone que tiene la siguiente forma:
 
 $$
-T_t = a_0 + a_1 +... + a_pt^p
+T_t = a_0 + a_1t +... + a_pt^p
 $$
 
 Si se tiene $p = 1$ la tendencia es lineal, si $p = 2$ la tendencia es cuadrática.
@@ -47,12 +52,13 @@ Ambos operadores se relacionan de la siguiente manera:
 $$
 \nabla Z_t=Z_t-Z_{t-1}=Z_t-BZ_t=(1-B)Z_t
 $$
-Teniendo que $\nabla=(1-B)$ 
+Teniendo que $\nabla=(1-B)$
+
 Si aplicamos el operador diferencia sucesivamente entonces se obtiene:
 
 
 $$
 \begin{array}{cc}
-\nabla^k=(1-B)^k; & \nabla^kX_t=\sum_{j=0}^k\frac{k!}{k!(k-1)!}(-1)^kX_{t-k}
+\nabla^k=(1-B)^k; & \nabla^kX_t=\sum_{j=0}^k\frac{k!}{j!(k-j)!}(-1)^jX_{t-j}
 \end{array}
 $$
